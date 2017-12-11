@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     var randomAnswer = 0
     
-    var ballImages = ["ball1","ball2","ball3","ball4","ball5"]
+    let ballArray = ["ball1","ball2","ball3","ball4","ball5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     func ballAnswer() {
         randomAnswer = Int(arc4random_uniform(5))
         
-        ballImage.image = UIImage(named: ballImages[randomAnswer])
+        ballImage.image = UIImage(named: ballArray[randomAnswer])
     }
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
